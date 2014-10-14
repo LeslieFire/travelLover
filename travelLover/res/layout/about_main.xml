@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <Button 
+            android:id="@+id/aboutMainBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:textColor="#0099FF"
+            android:text="@string/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#0099FF"
+            android:text="关于爱拼车" />
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/aboutMainPart1"
+        android:layout_width="fill_parent"
+        android:layout_height= "wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"/>
+    <ListView 
+        android:id="@+id/aboutMainPart2"
+        android:layout_width="fill_parent"
+        android:layout_height= "wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"/>
+
+</LinearLayout>
