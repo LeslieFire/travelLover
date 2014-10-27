@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <Button 
+     android:id="@+id/registercarBackBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:background="@android:color/transparent"
+     android:textColor="#0099FF"
+     android:text="@string/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="#0099FF"
+        android:text="@string/register" />
+
+</RelativeLayout>
+
+    <EditText
+        android:id="@+id/registercarloginname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="昵称"
+        />
+    <EditText 
+        android:id="@+id/registercarpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="密码"
+        />
+    <EditText 
+        android:id="@+id/passworddoublecheck"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="确认密码"
+        />"
+    <Button
+        android:id="@+id/registercarbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_radius3"
+        android:text="注册"
+        android:textColor="#ffffff"/>
+    </LinearLayout>

@@ -29,6 +29,26 @@
         <activity android:name="com.travellover.user.MainUserActivity"></activity>
         <activity android:name="com.travellover.user.LinePublishActivity"></activity>
         <activity android:name="com.travellover.user.UserSettingActivity"></activity>
+        <activity android:name="com.travellover.user.AboutMainActivity"></activity>
+        <activity android:name="com.travellover.user.PersonalMainActivity"></activity>
+        <activity android:name="com.travellover.user.PersonalDataActivity"></activity>
+        <activity android:name="com.travellover.user.OrderListActivity"></activity>
+        <activity android:name="com.travellover.user.LineListActivity"></activity>
+        <activity android:name="com.travellover.user.LineDetailActivity"></activity>
+        <activity android:name="com.travellover.user.TravelerDetailActivity"></activity>
+        <activity android:name="com.travellover.register.LoginWithNameActivity"></activity>
+        <activity android:name="com.travellover.user.MainDriverActivity"></activity>
+        <activity android:name="com.travellover.user.PersonalDriverMainActivity"></activity>
+        <activity android:name="com.travellover.user.DriverFarLineListActivity"></activity>
+        <activity android:name="com.travellover.user.DriverCloseLineListActivity"></activity>
+        <activity android:name="com.travellovercar.register.LoginCarActivity"></activity>
+        <activity android:name="com.travellovercar.register.RegisterCarFirstActivity"></activity>
+        <activity android:name="com.travellovercar.register.RegisterCarSecondActivity"></activity>
+        <activity android:name="com.travellovercar.register.RegisterCarThirdActivity"></activity>
+        <activity android:name="com.example.travellover.ContactListActivity"></activity>
+        <activity android:name="com.example.travellover.MainTabActivity"></activity>
+        <activity android:name="com.example.travellover.MessageofcontactActivity"></activity>
+        
     </application>
 
 </manifest>

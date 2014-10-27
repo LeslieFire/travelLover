@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <Button 
+     android:id="@+id/ownerloginBackBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:background="@android:color/transparent"
+     android:textColor="#0099FF"
+     android:text="@string/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="#0099FF"
+        android:text="常用联系人" />
+
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/contactlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button 
+        android:id="@+id/searchcontact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/button_radius3"
+        android:text="查询"
+        android:textColor="#ffffff"/>    
+    </LinearLayout>

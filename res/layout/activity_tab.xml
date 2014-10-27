@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabActivity" >
+    <RelativeLayout 
+    android:id="@+id/title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <Button 
+     android:id="@+id/BackBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:background="@android:color/transparent"
+     android:textColor="#0099FF"
+     android:text="@string/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="#0099FF"
+        android:text="@string/messagecenter" />
+
+</RelativeLayout>
+
+<TabHost android:id="@android:id/tabhost"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/title"
+     >
+ <RelativeLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+     
+     <TabWidget android:id="@android:id/tabs"
+         android:orientation="horizontal"
+         android:layout_alignParentTop="true"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content">
+         
+     </TabWidget>
+
+<FrameLayout android:id="@android:id/tabcontent"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_below="@android:id/tabs">
+ <LinearLayout  android:id="@+id/tab01"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20sp">
+     <TextView  android:text="这是tab1的内容" 
+         android:layout_width="match_parent" 
+         android:layout_height="match_parent"
+         /> 
+     
+ </LinearLayout>
+    <LinearLayout  android:id="@+id/tab02"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20sp">
+        <TextView  android:text="这是tab2的内容" 
+         android:layout_width="match_parent" 
+         android:layout_height="match_parent"
+         /> 
+    </LinearLayout>
+    <LinearLayout  android:id="@+id/tab03"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20sp">
+        <TextView  android:text="这是tab3的内容" 
+         android:layout_width="match_parent" 
+         android:layout_height="match_parent"
+         /> 
+    </LinearLayout>
+    
+</FrameLayout>
+
+</RelativeLayout>
+</TabHost>
+</RelativeLayout>

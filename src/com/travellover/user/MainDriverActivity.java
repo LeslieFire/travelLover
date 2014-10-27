@@ -3,6 +3,7 @@ package com.travellover.user;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import com.example.travellover.MainTabActivity;
 import com.example.travellover.R;
 
 import android.app.Activity;
@@ -12,86 +13,70 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-public class MainUserActivity extends Activity {
-	
+public class MainDriverActivity extends Activity {
+
 	private ImageButton headshotBtn;
 	private LinearLayout mainViewLayout;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_user);
-		mainViewLayout = (LinearLayout)findViewById(R.id.mainViewLayout);
-		Button publishBtn = (Button)findViewById(R.id.mainUserLinePublishBtn);
-		publishBtn.setOnClickListener(new Button.OnClickListener(){
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, LinePublishActivity.class);
-				startActivity(intent);
-			}
-			
-		});
-		ImageButton personalBtn = (ImageButton)findViewById(R.id.mainUserPersonalBtn);
-		personalBtn.setOnClickListener(new ImageButton.OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, PersonalMainActivity.class);
-				startActivity(intent);
-			}
-			
-		});
-		ImageButton settingBtn = (ImageButton)findViewById(R.id.mainUserSettingBtn);
+		setContentView(R.layout.driver_main);
+		mainViewLayout = (LinearLayout)findViewById(R.id.mainDriverViewLayout);
+		ImageButton settingBtn = (ImageButton)findViewById(R.id.mainDriverSettingBtn);
 		settingBtn.setOnClickListener(new ImageButton.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, UserSettingActivity.class);
+				intent.setClass(MainDriverActivity.this, UserSettingActivity.class);
 				startActivity(intent);
 			}
 			
 		});
-		Button processBtn = (Button)findViewById(R.id.mainUserProceedBtn);
+		ImageButton personalBtn = (ImageButton)findViewById(R.id.mainDriverPersonalBtn);
+		personalBtn.setOnClickListener(new ImageButton.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainDriverActivity.this, PersonalDriverMainActivity.class);
+				startActivity(intent);
+			}
+			
+		});
+		Button processBtn = (Button)findViewById(R.id.mainDriverProceedBtn);
 		processBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, PersonalMainActivity.class);
+				intent.setClass(MainDriverActivity.this, PersonalDriverMainActivity.class);
 				startActivity(intent);
 			}
 			
 		});
-		headshotBtn = (ImageButton)findViewById(R.id.userHeadshotBtn);
+		headshotBtn = (ImageButton)findViewById(R.id.driverHeadshotBtn);
 		headshotBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Builder headshotSelect = new AlertDialog.Builder(MainUserActivity.this);
+				Builder headshotSelect = new AlertDialog.Builder(MainDriverActivity.this);
 				headshotSelect.setTitle("设置头像");
 				headshotSelect.setItems(new String[]{"拍一张", "从相册选择", "取消"}, new DialogInterface.OnClickListener() {
 					
@@ -116,13 +101,13 @@ public class MainUserActivity extends Activity {
 			}
 			
 		});
-		LinearLayout backgroundLinear = (LinearLayout)findViewById(R.id.backgroundLinear);
+		LinearLayout backgroundLinear = (LinearLayout)findViewById(R.id.backgroundDriverLinear);
 		backgroundLinear.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Builder backgroundSelect = new AlertDialog.Builder(MainUserActivity.this);
+				Builder backgroundSelect = new AlertDialog.Builder(MainDriverActivity.this);
 				backgroundSelect.setTitle("更换封面");
 				backgroundSelect.setItems(new String[]{"拍一张", "从相册选择", "使用默认封面", "取消"}, new DialogInterface.OnClickListener() {
 					
@@ -150,32 +135,67 @@ public class MainUserActivity extends Activity {
 			}
 			
 		});
-		Button orderBtn = (Button)findViewById(R.id.orderBtn);
+		Button orderBtn = (Button)findViewById(R.id.driverOrderBtn);
 		orderBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, OrderListActivity.class);
+				intent.setClass(MainDriverActivity.this, LineListActivity.class);
 				startActivity(intent);
 			}
 			
 		});
-		Button lineBtn = (Button)findViewById(R.id.lineBtn);
-		lineBtn.setOnClickListener(new OnClickListener(){
+		Button collectionBtn = (Button)findViewById(R.id.driverCollectionBtn);
+		collectionBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainUserActivity.this, LineListActivity.class);
+				intent.setClass(MainDriverActivity.this, LineListActivity.class);
+				startActivity(intent);
+			}
+			
+		});
+		Button attentionBtn = (Button)findViewById(R.id.driverAttentionBtn);
+		attentionBtn.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainDriverActivity.this, MainTabActivity.class);
+				startActivity(intent);
+			}
+			
+		});
+		Button farBtn = (Button)findViewById(R.id.mainDriverFarLineBtn);
+		farBtn.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainDriverActivity.this, DriverFarLineListActivity.class);
+				startActivity(intent);
+			}
+			
+		});
+		Button closeBtn = (Button)findViewById(R.id.mainDriverCloseLineBtn);
+		closeBtn.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainDriverActivity.this, DriverCloseLineListActivity.class);
 				startActivity(intent);
 			}
 			
 		});
 	}
-
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub

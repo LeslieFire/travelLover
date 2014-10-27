@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff">
         <Button 
+            android:id="@+id/personalDriverBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -22,25 +23,19 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="#0099FF"
-            android:text="设置" />
+            android:text="个人中心" />
     </RelativeLayout>
     <ListView 
-        android:id="@+id/settingViewPart1"
+        android:id="@+id/personalDriverViewPart1"
         android:layout_width="fill_parent"
         android:layout_height= "wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#ffffff"/>
-    <TextView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="身份变换之后，操作也会有所改变哦。"/>
+        android:background="#ffffff"/>
     <ListView 
-        android:id="@+id/settingViewPart2"
+        android:id="@+id/personalDriverViewPart2"
         android:layout_width="fill_parent"
         android:layout_height= "wrap_content"
         android:layout_marginBottom="10dp"
@@ -48,21 +43,19 @@
         android:layout_marginRight="10dp"
         android:background="#ffffff"/>
     <ListView 
-        android:id="@+id/settingViewPart3"
+        android:id="@+id/personalDriverViewPart4"
         android:layout_width="fill_parent"
         android:layout_height= "wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="#ffffff"/>
-    <Button 
-        android:id="@+id/exitBtn"
+    <ListView 
+        android:id="@+id/personalDriverViewPart3"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height= "wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/button_style10"
-        android:textColor="#0099FF"
-        android:text="登出"/>
+        android:background="#ffffff"/>
 
 </LinearLayout>

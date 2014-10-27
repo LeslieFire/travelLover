@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <Button 
+            android:id="@+id/lineListBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:text="@string/back"
+            android:textColor="#0099FF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#0099FF"
+            android:text="我的线路" />
+    </RelativeLayout>
+    <ListView 
+            android:id="@+id/lineListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/order_item_style"/>
+
+</LinearLayout>

@@ -2,10 +2,15 @@ package com.example.travellover;
 
 import java.util.ArrayList;
 
+import com.travellover.register.LoginWithNameActivity;
+import com.travellover.user.MainDriverActivity;
+import com.travellover.user.MainUserActivity;
+
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -31,6 +36,41 @@ public class MainActivity extends Activity implements OnPageChangeListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		SharedPreferences mySharedPreferences= getSharedPreferences("information",Activity.MODE_PRIVATE);
+		String first = mySharedPreferences.getString("first", "0");
+		String status = mySharedPreferences.getString("status", "0");
+		if(first.equals("0")){
+			SharedPreferences.Editor editor = mySharedPreferences.edit();
+			editor.putString("first", "1");
+			editor.commit();
+		}
+		else {
+			String username = mySharedPreferences.getString("username", "");
+			String password = mySharedPreferences.getString("password", "");
+			if(!username.equals("") && !password.equals("")) {
+				Intent intent = new Intent();
+				if(status.equals("0")) {
+					intent.setClass(MainActivity.this, MainUserActivity.class);
+				}
+				else {
+					intent.setClass(MainActivity.this, MainDriverActivity.class);
+				}
+				startActivity(intent);
+			}
+			else if(!username.equals("") && password.equals("")) {
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, LoginWithNameActivity.class);
+				startActivity(intent);
+			}
+			else {
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, LoginMainActivity.class);
+				startActivity(intent);
+			}
+			finish();
+		}
+		
+		
 		final ArrayList<View> aViews=new ArrayList<View>();
         LayoutInflater lf=LayoutInflater.from(this);
         vg=(ViewGroup) lf.inflate(R.layout.welcome_activity, null);

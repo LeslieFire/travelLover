@@ -8,5 +8,10 @@
     <string name="back">返回</string>
     <string name="next">下一步</string>
     <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="announcement1">1、驾驶证验证是为了验证驾驶能力和资格</string>
+    <string name="announcement2">2、验证通过后仅会显示性别、年龄和驾龄</string>
+    <string name="announcement3">3、不糊泄露其它个人关键信息</string>
+    <string name="messagecenter">消息中心</string>
 
 </resources>

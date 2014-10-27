@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainViewLayout"
+    android:id="@+id/mainDriverViewLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_car_passenger"
@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff">
         <ImageButton 
-            android:id="@+id/mainUserSettingBtn"
+            android:id="@+id/mainDriverSettingBtn"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:scaleType="fitXY"
@@ -28,9 +28,9 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="#0099FF"
-            android:text="爱拼车-乘客" />
+            android:text="爱拼车-车主" />
         <ImageButton 
-            android:id="@+id/mainUserPersonalBtn"
+            android:id="@+id/mainDriverPersonalBtn"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:scaleType="fitXY"
@@ -59,7 +59,7 @@
 	        android:layout_height="fill_parent" 
 	        android:layout_weight="1"/>
         <Button 
-            android:id="@+id/mainUserProceedBtn"
+            android:id="@+id/mainDriverProceedBtn"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
@@ -72,13 +72,13 @@
             android:text="马上处理"/>
     </LinearLayout>
     <LinearLayout 
-        android:id="@+id/backgroundLinear"
+        android:id="@+id/backgroundDriverLinear"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/linear_style3">
         <ImageButton 
-            android:id="@+id/userHeadshotBtn"
+            android:id="@+id/driverHeadshotBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -121,23 +121,25 @@
         android:layout_marginRight="10dp"
         android:orientation="horizontal">
         <Button 
+            android:id="@+id/mainDriverCloseLineBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/button_style5"
             android:textColor="#0099FF"
-            android:text="周边车主"/>
+            android:text="市内"/>
         <ImageView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/bg_owner_line"/>
         <Button 
-            android:id="@+id/mainUserLinePublishBtn"
+            android:id="@+id/mainDriverFarLineBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_style6"
             android:textColor="#0099FF"
-            android:text="+发布线路"/>
+            android:text="长途"/>
     </LinearLayout>
     <LinearLayout 
         android:layout_width="fill_parent"
@@ -149,18 +151,7 @@
         android:gravity="bottom"
         android:orientation="horizontal">
         <Button 
-            android:id="@+id/lineBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_style4"
-            android:text="0\n线路"/>
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bg_owner_line"/>
-        <Button 
-            android:id="@+id/orderBtn"
+            android:id="@+id/driverOrderBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -171,7 +162,29 @@
             android:layout_height="wrap_content"
             android:src="@drawable/bg_owner_line"/>
         <Button 
-            android:id="@+id/messageBtn"
+            android:id="@+id/driverAttentionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style4"
+            android:text="0\n关注"/>
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_owner_line"/>
+        <Button 
+            android:id="@+id/driverCollectionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style4"
+            android:text="0\n收藏"/>
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_owner_line"/>
+        <Button 
+            android:id="@+id/driverMessageBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

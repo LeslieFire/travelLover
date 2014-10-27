@@ -55,6 +55,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 	        <ImageButton 
+	            android:id="@+id/singleImageBtn"
 	            android:layout_width="15dp"
 	            android:layout_height="15dp"
 	            android:layout_gravity="center"
@@ -63,6 +64,7 @@
 	            android:background="@drawable/imagebtn_style"
 	            android:src="@drawable/ic_checkbox_p"/>
 	        <Button 
+	            android:id="@+id/singleBtn"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:background="@drawable/button_style8"
@@ -77,6 +79,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 	        <ImageButton 
+	            android:id="@+id/doubleImageBtn"
 	            android:layout_width="15dp"
 	            android:layout_height="15dp"
 	            android:layout_gravity="center"
@@ -85,6 +88,7 @@
 	            android:background="@drawable/imagebtn_style"
 	            android:src="@drawable/ic_checkbox_n"/>
 	        <Button 
+	            android:id="@+id/doubleBtn"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:background="@drawable/button_style8"
@@ -95,6 +99,7 @@
         
     </LinearLayout>
     <Button 
+        android:id="@+id/closeTimeBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -117,12 +122,14 @@
             android:textSize="18sp"
             android:text="所需座位数"/>
         <ImageButton 
+            android:id="@+id/closeAddBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="fitXY"
             android:background="@android:color/transparent"
             android:src="@drawable/btn_increase"/>
         <TextView 
+            android:id="@+id/numberCloseOfPeople"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -131,6 +138,7 @@
             android:textSize="18sp"
             android:text="1"/>
         <ImageButton 
+            android:id="@+id/closeMinusBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="fitXY"
@@ -146,6 +154,7 @@
         android:hint="备注"
         android:minLines="3"/>
     <Button 
+        android:id="@+id/newLinePublishCloseBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
