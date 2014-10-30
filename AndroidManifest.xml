@@ -6,13 +6,32 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="L4xYjpmiKNGn3VLw3yWXvbfW" />
+
         <activity
             android:name="com.example.travellover.MainActivity"
             android:label="@string/app_name" >
@@ -22,33 +41,61 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.travellover.LoginMainActivity"></activity>
-        <activity android:name="com.travellover.register.RegisterUserFirstActivity"></activity>
-        <activity android:name="com.travellover.register.RegisterUserSecondActivity"></activity>
-        <activity android:name="com.travellover.register.LoginUserActivity"></activity>
-        <activity android:name="com.travellover.user.MainUserActivity"></activity>
-        <activity android:name="com.travellover.user.LinePublishActivity"></activity>
-        <activity android:name="com.travellover.user.UserSettingActivity"></activity>
-        <activity android:name="com.travellover.user.AboutMainActivity"></activity>
-        <activity android:name="com.travellover.user.PersonalMainActivity"></activity>
-        <activity android:name="com.travellover.user.PersonalDataActivity"></activity>
-        <activity android:name="com.travellover.user.OrderListActivity"></activity>
-        <activity android:name="com.travellover.user.LineListActivity"></activity>
-        <activity android:name="com.travellover.user.LineDetailActivity"></activity>
-        <activity android:name="com.travellover.user.TravelerDetailActivity"></activity>
-        <activity android:name="com.travellover.register.LoginWithNameActivity"></activity>
-        <activity android:name="com.travellover.user.MainDriverActivity"></activity>
-        <activity android:name="com.travellover.user.PersonalDriverMainActivity"></activity>
-        <activity android:name="com.travellover.user.DriverFarLineListActivity"></activity>
-        <activity android:name="com.travellover.user.DriverCloseLineListActivity"></activity>
-        <activity android:name="com.travellovercar.register.LoginCarActivity"></activity>
-        <activity android:name="com.travellovercar.register.RegisterCarFirstActivity"></activity>
-        <activity android:name="com.travellovercar.register.RegisterCarSecondActivity"></activity>
-        <activity android:name="com.travellovercar.register.RegisterCarThirdActivity"></activity>
-        <activity android:name="com.example.travellover.ContactListActivity"></activity>
-        <activity android:name="com.example.travellover.MainTabActivity"></activity>
-        <activity android:name="com.example.travellover.MessageofcontactActivity"></activity>
-        
+        <activity android:name="com.example.travellover.LoginMainActivity" >
+        </activity>
+        <activity android:name="com.travellover.register.RegisterUserFirstActivity" >
+        </activity>
+        <activity android:name="com.travellover.register.RegisterUserSecondActivity" >
+        </activity>
+        <activity android:name="com.travellover.register.LoginUserActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.MainUserActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.LinePublishActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.UserSettingActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.AboutMainActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.PersonalMainActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.PersonalDataActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.OrderListActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.LineListActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.LineDetailActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.TravelerDetailActivity" >
+        </activity>
+        <activity android:name="com.travellover.register.LoginWithNameActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.MainDriverActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.PersonalDriverMainActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.DriverFarLineListActivity" >
+        </activity>
+        <activity android:name="com.travellover.user.DriverCloseLineListActivity" >
+        </activity>
+        <activity android:name="com.travellovercar.register.LoginCarActivity" >
+        </activity>
+        <activity android:name="com.travellovercar.register.RegisterCarFirstActivity" >
+        </activity>
+        <activity android:name="com.travellovercar.register.RegisterCarSecondActivity" >
+        </activity>
+        <activity android:name="com.travellovercar.register.RegisterCarThirdActivity" >
+        </activity>
+        <activity android:name="com.example.travellover.ContactListActivity" >
+        </activity>
+        <activity android:name="com.example.travellover.MainTabActivity" >
+        </activity>
+        <activity android:name="com.example.travellover.MessageofcontactActivity" >
+        </activity>
+        <activity
+            android:name="com.travellover.map.MapActivity">
+        </activity>
     </application>
 
 </manifest>
