@@ -27,6 +27,32 @@
 	        android:textColor="#000000"
 	        android:textSize="16sp"/>
     </RelativeLayout>
+    
+    <!--  添加地图测试相关按钮  add by leslie 2014/10/30  begin -->
+    <Button 
+        android:id="@+id/bMapLocat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_radius2"
+        android:layout_marginBottom="50dp"
+        android:text="地图定位"/>
+    
+    <Button 
+        android:id="@+id/bRoutePlan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_radius2"
+        android:layout_marginBottom="50dp"
+        android:text="路线规划"/>
+    
+    <!--  添加地图定位按钮  add by leslie 2014/10/30  end -->
+    
     <Button 
         android:id="@+id/loginNearedLine"
         android:layout_width="wrap_content"
